@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Progresso Infosystems">
+  <title>Progresso Infosystems</title>
+
+  <link rel="shortcut icon" href="assets/img/favicon-logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <link rel="stylesheet" href="assets/css/jquery-ui.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+    integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* Section Styling */
+
+    /* Product Box */
+    .product-box {
+      position: relative;
+      border-radius: 18px;
+      background: linear-gradient(145deg, #ffffff, #f1f5ff);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: all 0.6s ease;
+    }
+
+    .product-box:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 15px 35px rgba(13, 110, 253, 0.15);
+      background: linear-gradient(145deg, #ffffff, #e8f0ff);
+    }
+
+    /* Image Wrapper */
+    .image-wrap {
+      position: relative;
+      overflow: hidden;
+      padding: 40px 20px;
+    }
+
+    .image-wrap img {
+      width: 60%;
+      transition: all 0.7s ease;
+    }
+
+    /* Hover Image (second one) */
+    .image-wrap .hover-img {
+      position: absolute;
+      top: 34px;
+      left: 80px;
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    /* Hover Effect */
+    .product-box:hover .main-img {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+
+    .product-box:hover .hover-img {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Product Number */
+    .product-number {
+      position: absolute;
+      bottom: 15px;
+      right: 25px;
+      font-size: 3rem;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.05);
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="scroll-up">
+    <svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+
+  <div id="preloader" class="preloader">
+    <div class="animation-preloader">
+      <div class="spinner">
+      </div>
+      <div class="txt-loading">
+        <span data-text-preloader="P" class="letters-loading">
+          P
+        </span>
+        <span data-text-preloader="I" class="letters-loading">
+          I
+        </span>
+        <span data-text-preloader="S" class="letters-loading">
+          S
+        </span>
+
+      </div>
+      <p class="text-center">...Progresso Infosystems is Loading...</p>
+    </div>
+    <div class="loader">
+      <div class="row">
+        <div class="col-3 loader-section section-left">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-left">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-right">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-right">
+          <div class="bg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mouse-cursor cursor-outer"></div>
+  <div class="mouse-cursor cursor-inner"></div>
+
+  <div class="fix-area">
+    <div class="offcanvas__info">
+      <div class="offcanvas__wrapper">
+        <div class="offcanvas__content">
+          <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+            <div class="offcanvas__logo">
+              <a href="">
+                <img src="assets/img/logo/logo-dark.png" alt="logo-img" style="height: 50px;">
+              </a>
+            </div>
+            <div class="offcanvas__close">
+              <button>
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <p class="text d-none d-xl-block">
+            Progresso Infosystems delivers reliable and future-ready IT and Cloud solutions that empower
+            businesses to achieve digital excellence across India. We specialize in Cloud Computing, Data
+            Center Solutions, and Enterprise IT Implementation.
+          </p>
+          <div class="mobile-menu fix mb-3"></div>
+          <div class="offcanvas__contact">
+            <h4>Contact Info</h4>
+            <ul>
+              <li class="d-flex align-items-center">
+                <div class="offcanvas__contact-icon">
+                  <i class="fal fa-map-marker-alt"></i>
+                </div>
+                <div class="offcanvas__contact-text">
+                  <a target="_blank" href="#">S.D. Road, Secunderabad - 500003, India</a>
+                </div>
+              </li>
+              <li class="d-flex align-items-center">
+                <div class="offcanvas__contact-icon mr-15">
+                  <i class="fal fa-envelope"></i>
+                </div>
+                <div class="offcanvas__contact-text">
+                  <a href="#"><span
+                      class="mailto:sales@progressoinfosystems.com">sales@progressoinfosystems.com</span></a>
+                </div>
+              </li>
+              <li class="d-flex align-items-center">
+                <div class="offcanvas__contact-icon mr-15">
+                  <i class="fal fa-clock"></i>
+                </div>
+                <div class="offcanvas__contact-text">
+                  <a target="_blank" href="#">Mon - Fri, 09:00 AM – 05:00 PM</a>
+                </div>
+              </li>
+              <li class="d-flex align-items-center">
+                <div class="offcanvas__contact-icon mr-15">
+                  <i class="fal fa-phone-alt"></i>
+                </div>
+                <div class="offcanvas__contact-text">
+                  <a href="tel:+919505135826">+91 9505135826</a>
+                </div>
+              </li>
+            </ul>
+            <div class="header-button mt-4">
+              <a href="contact-us.html" class="theme-btn">
+                Contact Us
+              </a>
+            </div>
+            <div class="social-icon d-flex align-items-center">
+              <a href="https://www.facebook.com/profile.php?id=61584080636319"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://x.com/ProgressoL65198"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/venu-keerthi-510760365"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://instagram.com/progressoinfosystemspvt"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas__overlay"></div>
+
+  <div class="search-wrap">
+    <div class="search-inner">
+      <i class="fas fa-times search-close" id="search-close"></i>
+      <div class="search-cell">
+        <form method="get">
+          <div class="search-field-holder">
+            <input type="search" class="main-search-input" placeholder="Search...">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <header>
+      <div id="header-sticky" class="header-2 style-3">
+        <div class="container-fluid">
+          <div class="mega-menu-wrapper">
+            <div class="header-main ">
+              <div class="header-left">
+                <div class="logo">
+                  <a href="index.html" class="header-logo">
+                    <img src="assets/img/logo/logo-dark.png" alt="Progresso Infosystems Logo" style="height: 80px;">
+                  </a>
+                </div>
+                <div class="mean__menu-wrapper">
+                  <div class="main-menu">
+                    <nav id="mobile-menu">
+                      <ul>
+                        <li class=" active menu-thumb">
+                          <a href="index.html">
+                            Home
+                          </a>
+                        </li>
+                        <li>
+                          <a>About Us</a>
+                          <ul class="submenu p-1">
+                            <li><a href="about-who-we-are.html">WHO WE ARE</a></li>
+                            <li><a href="about-work-with-us.html">WORK WITH US</a></li>
+                            <li><a href="about-leadership.html">LEADERSHIP</a></li>
+                            <li><a>INDUSTRIES</a>
+                              <ul class="submenu p-1">
+                                <li><a href="about-banking.html">Banking</a></li>
+                                <li><a href="about-govt-&-psu.html">Govt and PSU</a>
+                                </li>
+                                <li><a href="about-IT-Enabled-Services.html">IT Enabled
+                                    Services</a></li>
+                                <li><a href="about-Healthcare.html">Healthcare</a></li>
+                                <li><a href="about-pharma.html">Pharma</a></li>
+                                <li><a href="about-Telecom-Media-&-Telecommunications.html">Telecom
+                                    Media & Telecommunications</a>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a>Services</a>
+                          <ul class="submenu p-1">
+                            <li><a href="service-IT-Hardware.html">IT Hardware</a></li>
+                            <li><a href="service-IT-security.html">IT security</a></li>
+                            <li><a href="service-IT-software-solutions.html">IT Software
+                                solutions</a></li>
+                            <li><a href="service-IT-implementation-support.html">IT
+                                implementation Support</a></li>
+                            <li><a href="service-data-center-solutions.html">Data Center
+                                Solutions</a></li>
+                            <li><a href="service-cloud-computing.html">Cloud Computing</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a>Cybersecurity</a>
+                          <ul class="submenu p-1">
+                            <li><a>CYBERSECURITY OPERATIONS</a>
+                              <ul class="submenu p-1">
+                                <li><a href="Secure-SD-WAN-Solutions.html">Secure SD-WAN
+                                    Solutions</a></li>
+                                <li><a href="Phishing-simulation.html">Phishing
+                                    Simulation</a></li>
+                              </ul>
+                            </li>
+                            <li><a>ADVISORY AND CONSULTING</a>
+                              <ul class="submenu p-1">
+                                <li><a href="vCISO-&-vDPO.html">vCISO-vDPO</a></li>
+                                <li><a href="Security-Advisory.html">Security
+                                    Advisory</a></li>
+                                <li><a href="cloud-compliance-advisory.html">Cloud
+                                    Compliance Advisory</a></li>
+                                <li><a href="Incident-Response.html">Incident
+                                    Response</a></li>
+                                <li><a href="Configuration-Review-Services.html">Configuration
+                                    Review Services</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+
+                        <li>
+                          <a>Cloud & Infra</a>
+                          <ul class="submenu p-1">
+                            <li><a>MICROSOFT CLOUD SOLUTIONS</a>
+                              <ul class="submenu p-1">
+                                <li><a href="microsoft-365-migration.html">Microsoft 365
+                                    Migration</a></li>
+                                <li><a href="microsoft-co-pilot-solutions.html">Microsoft
+                                    Copilot Solutions</a></li>
+                                <li><a href="powerbi-solutions.html">Power BI and Fabric
+                                    Solutions</a></li>
+                                <li><a href="azure-solutions.html">AZURE Solutions</a>
+                                </li>
+                                <li><a href="microsoft-365-security.html">Microsoft 365
+                                    Security</a></li>
+                                <li><a href="sharepoint-solutions.html">Sharepoint
+                                    Solutions</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li><a>MANAGED CLOUD SERVICES</a>
+                              <ul class="submenu p-1">
+                                <li><a href="cloud-security-architecture.html">Cloud
+                                    Security Architecture</a></li>
+                                <li><a href="hybrid-cloud-implementation.html">Hybrid
+                                    Cloud Implementation</a></li>
+                                <li><a href="end-to-end-managed-cloud-services.html">END-to-END
+                                    Managed Services</a></li>
+                                <li><a href="cloud-optimization.html">Cloud
+                                    Optimization</a></li>
+                                <li><a href="cloud-resilience-solutions.html">Cloud
+                                    Resilience Solutions</a></li>
+                                <li><a href="multi-cloud-strategy.html">Multi-Cloud
+                                    Strategy</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li><a>BACKUP STORAGE AND DISASTER RECOVERY</a>
+                              <ul class="submenu p-1">
+                                <li><a href="cloud-and-on-prem-backup.html">Cloud and
+                                    ON-PREM Backup</a></li>
+                                <li><a href="data-replication-and-redundancy.html">Data
+                                    Replication and Redundancy</a></li>
+                                <li><a href="load-balancing-and-application-delivery.html">Load
+                                    Balancing and Application Delivery</a></li>
+                                <li><a href="disaster-recovery-planning-drp.html">Disaster
+                                    Recovery Planning (DRP)</a></li>
+                                <li><a href="storage-and-hyper-converged-storage.html">Storage
+                                    and HYPER-converged Storage</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a>AI</a>
+                          <ul class="submenu p-1">
+                            <li><a href="AI-Strategy-&-Advisory.html">AI Strategy &
+                                Advisory</a></li>
+                            <li><a href="Custom-AI-&-ML-Solutions.html">Custom AI & ML
+                                Solutions</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="Products.html">Products</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li>
+                          <a class="theme-btn black-btn company-pro text-white"
+                            href="assets/progress company Porfile.pdf" download>Company profile<i
+                              class="fa-regular fa-file-pdf"></i></a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="header-right">
+                <div class="header__hamburger d-xl-none my-auto">
+                  <div class="sidebar__toggle">
+                    <i class="fas fa-bars"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/products-banner.jpg');">
+      <div class="container">
+        <div class="page-heading">
+          <div class="breadcrumb-sub-title">
+            <h1 class="wow fadeInUp" data-wow-delay=".3s">PRODUCTS</h1>
+            <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+              <li>
+                <a href="index.html">
+                  Home
+                </a>
+              </li>
+              <li>
+                <i class="fas fa-angle-double-right"></i>
+              </li>
+              <li>
+                Products
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="product-section section-bg mb-5 section-padding text-center">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <div class="sub-title"><span>Our Products</span></div>
+          <h2 class="split-text right" style="perspective: 400px;">
+            Our Latest Products
+          </h2>
+        </div>
+
+        <div class="row g-4 justify-content-start">
+          <!-- <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/testimonial/1.png" alt="Dell EMC">
+                <img class="hover-img" src="assets/img/testimonial/1.png" alt="Dell EMC Hover">
+              </div>
+              <span class="product-number">01</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/testimonial/2.png" alt="Samsung">
+                <img class="hover-img" src="assets/img/testimonial/2.png" alt="Samsung Hover">
+              </div>
+              <span class="product-number">02</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/testimonial/3.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/testimonial/3.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">03</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/testimonial/4.png" alt="Dell EMC">
+                <img class="hover-img" src="assets/img/testimonial/4.png" alt="Dell EMC Hover">
+              </div>
+              <span class="product-number">04</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/testimonial/5.png" alt="Samsung">
+                <img class="hover-img" src="assets/img/testimonial/5.png" alt="Samsung Hover">
+              </div>
+              <span class="product-number">05</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/testimonial/6.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/testimonial/6.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">06</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/testimonial/7.png" alt="Dell EMC">
+                <img class="hover-img" src="assets/img/testimonial/7.png" alt="Dell EMC Hover">
+              </div>
+              <span class="product-number">07</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/testimonial/8.png" alt="Samsung">
+                <img class="hover-img" src="assets/img/testimonial/8.png" alt="Samsung Hover">
+              </div>
+              <span class="product-number">08</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/testimonial/9.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/testimonial/9.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">09</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/testimonial/10.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/testimonial/10.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">10</span>
+            </div>
+          </div> -->
+          <!-- ======================== -->
+            
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/c1.jpg" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/c1.jpg" alt="Cisco Hover">
+              </div>
+              <span class="product-number">01</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/c2.jpg" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/c2.jpg" alt="Cisco Hover">
+              </div>
+              <span class="product-number">02</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/c3.jpg" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/c3.jpg" alt="Cisco Hover">
+              </div>
+              <span class="product-number">03</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/c4.jpg" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/c4.jpg" alt="Cisco Hover">
+              </div>
+              <span class="product-number">04</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-01.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-01.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">05</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-02.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-02.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">06</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-03.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-03.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">07</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-04.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-04.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">08</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-05.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-05.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">09</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-07.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-07.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">10</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-08.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-08.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">11</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-09.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-09.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">12</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-10.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-10.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">13</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-11.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-11.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">14</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-12.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-12.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">15</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-13.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-13.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">16</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-14.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-14.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">17</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-15.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-15.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">18</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-16.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-16.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">19</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-17.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-17.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">20</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-18.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-18.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">21</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-19.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-19.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">22</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-20.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-20.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">23</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-21.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-21.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">24</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-22.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-22.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">25</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-23.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-23.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">26</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-24.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-24.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">27</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-25.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-25.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">28</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-26.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-26.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">29</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-27.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-27.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">30</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-28.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-28.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">31</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-29.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-29.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">32</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-30.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-30.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">33</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-31.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-31.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">34</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-32.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-32.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">35</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-33.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-33.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">36</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-34.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-34.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">37</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-35.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-35.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">38</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-36.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-36.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">39</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-37.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-37.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">40</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-38.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-38.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">41</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-39.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-39.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">42</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-40.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-40.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">43</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-41.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-41.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">44</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-42.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-42.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">45</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-43.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-43.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">46</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-44.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-44.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">47</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-45.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-45.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">48</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-46.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-46.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">49</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-47.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-47.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">50</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-48.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-48.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">51</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-49.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-49.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">52</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-50.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-50.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">53</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-51.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-51.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">54</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-52.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-52.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">55</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-53.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-53.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">56</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-54.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-54.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">57</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-55.png" alt="Cisco">
+                <img class="hover-img" src="assets/img/Partners/Partners-55.png" alt="Cisco Hover">
+              </div>
+              <span class="product-number">58</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-56.jpg" alt="Cisco" style="max-width: 114px;">
+                <img class="hover-img" src="assets/img/Partners/Partners-56.jpg" alt="Cisco Hover" style="max-width: 114px;">
+              </div>
+              <span class="product-number">59</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-57.jpg" alt="Cisco" style="max-width: 114px;">
+                <img class="hover-img" src="assets/img/Partners/Partners-57.jpg" alt="Cisco Hover"style="max-width: 114px;;">
+              </div>
+              <span class="product-number">60</span>
+            </div>
+          </div>
+
+                   <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-58.png" alt="Cisco" style="height: 114px;">
+                <img class="hover-img" src="assets/img/Partners/Partners-58.png" alt="Cisco Hover"  style="height: 114px;">
+              </div>
+              <span class="product-number">61</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-59.png" alt="Cisco"  style="height: 114px;">
+                <img class="hover-img" src="assets/img/Partners/Partners-59.png" alt="Cisco Hover"  style="height: 114px;">
+              </div>
+              <span class="product-number">62</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/partners-60.jpg" alt="Cisco" style="height: 114px;">
+                <img class="hover-img" src="assets/img/Partners/partners-60.jpg" alt="Cisco Hover" style="height: 114px;">
+              </div>
+              <span class="product-number">63</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-61.png" alt="Cisco"  style="height: 114px;">
+                <img class="hover-img" src="assets/img/Partners/Partners-61.png" alt="Cisco Hover"  style="height: 114px;">
+              </div>
+              <span class="product-number">64</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-62.png" alt="Cisco"  style="height: 114px;">
+                <img class="hover-img" src="assets/img/Partners/Partners-62.png" alt="Cisco Hover"  style="height: 114px;">
+              </div>
+              <span class="product-number">65</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-63.png" alt="Cisco"  style="height: 114px;">
+                <img class="hover-img" src="assets/img/Partners/Partners-63.png" alt="Cisco Hover"  style="height: 114px;">
+              </div>
+              <span class="product-number">66</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/partners-64.png" alt="Cisco"  style="height: 114px;">
+                <img class="hover-img" src="assets/img/Partners/partners-64.png" alt="Cisco Hover"  style="height: 114px;">
+              </div>
+              <span class="product-number">67</span>
+            </div>
+          </div>
+
+           <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/partners-65.png" alt="Cisco"  style="height: 114px;">
+                <img class="hover-img" src="assets/img/Partners/partners-65.png" alt="Cisco Hover"  style="height: 114px;">
+              </div>
+              <span class="product-number">68</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/partners-66.jpeg" alt="Cisco"  style="height: 114px;">
+                <img class="hover-img" src="assets/img/Partners/partners-66.jpeg" alt="Cisco Hover"  style="height: 114px;">
+              </div>
+              <span class="product-number">69</span>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="product-box">
+              <div class="image-wrap">
+                <img class="main-img" src="assets/img/Partners/Partners-06.png" alt="Cisco"  style="height: 114px;">
+                <img class="hover-img" src="assets/img/Partners/Partners-06.png" alt="Cisco Hover"  style="height: 114px;">
+              </div>
+              <span class="product-number">70</span>
+            </div>
+          </div>
+
+          <!-- ======================== -->
+
+        </div>
+      </div>
+    </section>
+
+
+
+        <footer class="footer-wrapper pb-0 section-bg">
+            <div class="container">
+                <div class="footer-widgets-1 style-2 style-3" style="padding: 80px 0;">
+                    <div class="row g-5">
+                        <div class="col-xl-3 col-lg-6 pe-0 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <a href="index.html">
+                                        <img src="assets/img/logo/logo-footer.png" alt="logo-img" style="height: 90px;">
+                                    </a>
+                                </div>
+                                <div class="footer-content">
+                                    <p>
+                                        Progresso Infosystems is quite possibly the most dependable company offering
+                                        Implementation Services on Cloud Computing, IT Hardware and IT security, Cloud
+                                        Services,IT execution support, Data Center Solutions across the India.
+                                    </p>
+
+                                    <div class="social-icon d-flex align-items-center">
+                                        <a href="https://www.facebook.com/profile.php?id=61584080636319"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a href="https://x.com/ProgressoL65198"><i
+                                                class="fa-brands fa-x-twitter"></i></a>
+                                        <a href="https://www.linkedin.com/in/venu-keerthi-510760365"><i
+                                                class="fab fa-linkedin-in"></i></a>
+                                        <a href="https://instagram.com/progressoinfosystemspvt"><i
+                                                class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="single-footer-widget ms-xxl-5 ps-xxl-3">
+                                <div class="widget-head">
+                                    <h4>Our Services</h4>
+                                </div>
+                                <ul class="list-area">
+                                    <li>
+                                        <a href="service-IT-Hardware.html">
+                                            <i class="fas fa-circle"></i>
+                                            IT Hardware
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service-IT-Security.html">
+                                            <i class="fas fa-circle"></i>
+                                            IT Security
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service-IT-software-solutions.html">
+                                            <i class="fas fa-circle"></i>
+                                            IT Software solutions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service-IT-implementation-support.html">
+                                            <i class="fas fa-circle"></i>
+                                            IT implementation support
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service-data-center-solutions.html">
+                                            <i class="fas fa-circle"></i>
+                                            Data Center Solutions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="service-cloud-computing.html">
+                                            <i class="fas fa-circle"></i>
+                                            Cloud Computing
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="single-footer-widget ms-xxl-3 ps-xxl-3">
+                                <div class="widget-head">
+                                    <h4>Quick links</h4>
+                                </div>
+                                <ul class="list-area">
+                                    <li>
+                                        <a href="index.html">
+                                            <i class="fas fa-circle"></i>
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="about-who-we-are.html">
+                                            <i class="fas fa-circle"></i>
+                                            About Us
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="Products.html">
+                                            <i class="fas fa-circle"></i>
+                                            Products
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact-us.html">
+                                            <i class="fas fa-circle"></i>
+
+                                            Contact Us
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="600ms">
+                            <div class="single-footer-widget ms-xxl-3">
+                                <div class="widget-head">
+                                    <h4>Contact Us</h4>
+                                </div>
+                                <div class="footer-content">
+                                    <div class="contact-info-area">
+                                        <div class="contact">
+                                            <a href="#"><i class="fa-regular fa-clock"></i></a>
+                                            <div class="mega-menu-wrapper">
+                                                <div class="header-main ">
+                                                    <div class="header-left">
+                                                        <div class="mean__menu-wrapper">
+                                                            <div class="main-menu">
+                                                                <nav id="mobile-menu">
+                                                                    <ul class="p-0">
+                                                                        <li>
+                                                                            <span class="trigger-text">Working Hours <i
+                                                                                    class="fa fa-chevron-down"
+                                                                                    aria-hidden="true"></i></span>
+                                                                            <ul class="submenu p-4">
+                                                                                <li>
+                                                                                    <h6>
+                                                                                        <span class="trigger-text">Mon –
+                                                                                            Fri:</span> <br>09:30
+                                                                                        AM – 06:30 PM
+                                                                                    </h6>
+
+                                                                                </li>
+                                                                                <li>
+                                                                                    <h6><span class="trigger-text">1st
+                                                                                            &amp; 3rd Sat:</span> <br>
+                                                                                        09:30 AM –
+                                                                                        04:30 PM</h6>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <h6><span class="trigger-text">2nd
+                                                                                            &amp; 4th Sat:</span> <br>
+                                                                                        Holiday</h6>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </nav>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contact">
+                                            <a href="#"><i class="flaticon-email"></i></a>
+                                            <div class="contact-infu">
+                                                <span>
+                                                    Mail Us:
+                                                </span>
+                                                <h6>sales@progressoinfosystems.com
+
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="contact">
+                                            <a href="https://maps.app.goo.gl/rWdu4fBFARejS17J9"><i
+                                                    class="fal fa-map-marker-alt"></i></a>
+                                            <div class="contact-infu">
+                                                <span>
+                                                    Address:
+                                                </span>
+                                                <h6>Flot No 307&308, 3rd floor, Assumption House, Opp. kotak Mahindra
+                                                    Bank, S.D. Road, Secunderabad -500003.
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="contact">
+                                            <a href="#"><i class="fal fa-phone-alt"></i></a>
+                                            <div class="contact-infu">
+                                                <span>
+                                                    Phone:
+                                                </span>
+                                                <h6>040-35165783</h6>
+                                                <h6>+91 9505135826.</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom style-2 section-bg-2">
+                <div class="container">
+                    <div class="footer-bottom-wrapper d-flex align-items-center justify-content-center">
+                        <p>
+                            Progresso Infosystems © 2025 All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://api.whatsapp.com/send?phone=91 9505135826&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
+            class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
+
+
+
+  </div>
+
+  <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/jquery-ui.js"></script>
+  <script src="assets/js/imagesloaded.min.js"></script>
+  <script src="assets/js/viewport.jquery.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap/gsap.js"></script>
+  <script src="assets/js/gsap/gsap-scroll-to-plugin.js"></script>
+  <script src="assets/js/gsap/gsap-scroll-smoother.js"></script>
+  <script src="assets/js/gsap/gsap-scroll-trigger.js"></script>
+  <script src="assets/js/gsap/gsap-split-text.js"></script>
+  <script src="assets/js/gsap/gsap-zotect.js"></script>
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <script src="assets/js/isotope.js"></script>
+  <script src="assets/js/jquery.waypoints.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/jquery.appear.min.js"></script>
+  <script src="assets/js/ajax-mail.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/jquery.meanmenu.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
